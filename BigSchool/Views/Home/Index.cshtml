@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<hr />
+<div class="row">
+    <ul>
+        @foreach(var course in Model)
+            {
+                <li>
+                    @course.DateTime.ToString("dd/MM/yyyy HH:mm") - @course.Name - @course.Category.Name
+                </li>
+            }
+    </ul>
+</div>
