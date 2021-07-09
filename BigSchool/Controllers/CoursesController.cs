@@ -90,9 +90,7 @@ namespace BigSchool.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,LecturerId,Place,DateTime,CategoryId")] Course course)
         {
-            ApplicationUser currentUser = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
             BigSchoolContext context = new BigSchoolContext();
-            course.LecturerId = currentUser.Id;
             if (ModelState.IsValid)
             {
                 context.Entry(course).State = EntityState.Modified;
