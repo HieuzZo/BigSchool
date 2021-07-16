@@ -15,6 +15,8 @@ namespace BigSchool.Models
             AspNetUserLogins = new HashSet<AspNetUserLogins>();
             Course = new HashSet<Course>();
             AspNetRoles = new HashSet<AspNetRoles>();
+            AspNetUsers1 = new HashSet<AspNetUsers>();
+            AspNetUsers2 = new HashSet<AspNetUsers>();
         }
 
         public string Id { get; set; }
@@ -58,5 +60,11 @@ namespace BigSchool.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AspNetRoles> AspNetRoles { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AspNetUsers> AspNetUsers1 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AspNetUsers> AspNetUsers2 { get; set; }
     }
 }
