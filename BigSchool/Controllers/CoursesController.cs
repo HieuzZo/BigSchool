@@ -145,9 +145,7 @@ namespace BigSchool.Controllers
             currentUser.Id).ToList();
 
             //danh sách các khóa học mà người dùng đã đăng ký
-            var listAttendances = context.Attendance.Where(p => p.Attendee ==
-
-            currentUser.Id).ToList();
+            var listAttendances = context.Attendance.Where(p => p.Attendee == currentUser.Id).ToList();
 
             var courses = new List<Course>();
             foreach (var course in listAttendances)
